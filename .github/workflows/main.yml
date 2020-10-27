@@ -8,7 +8,7 @@ on:
     
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/cache@v2
@@ -16,29 +16,22 @@ jobs:
         with:
           path: |
             inklecate_windows_and_linux.zip
-            inkle\
-          key: ${{ runner.os }}-${{ hashFiles('.\inklecate_windows_and_linux.zip') }}
+            inkle/
+          key: ${{ runner.os }}-${{ hashFiles('./inklecate_windows_and_linux.zip') }}
             
       - name: get inkle.
         id: get
-        shell: powershell
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          iwr https://github.com/inkle/ink/releases/download/0.9.0/inklecate_windows_and_linux.zip -OutFile .\inklecate_windows_and_linux.zip
+          wget https://github.com/inkle/ink/releases/download/0.9.0/inklecate_windows_and_linux.zip -O ./inklecate_windows_and_linux.zip
           7z x inklecate_windows_and_linux.zip -oinkle
 
-      - name: clone lfs
-        id: clone
-        shell: powershell
-        run: git lft clone 
-
       - name: build
-        shell: powershell
         run: |
-          .\inkle\inklecate.exe -o temp.json Entry.ink
-          copy .\template .\dist
-          $json = Get-Content ".\temp.json"
-          "var storyContent = " + $json >.\dist\story.js
+          mono inkle/inklecate.exe -o temp.json Entry.ink
+          cp -r template dist
+          echo "var storyContent = " > temp.txt
+          cat temp.txt temp.json > dist/story.js
 
       - name: Invoke Deployment
         with:
