@@ -80,7 +80,7 @@ h3.written-in-ink {
     margin: 0 auto;
     padding: 20px;
     padding-top: 4em;
-    background: white;
+    background: #ffffff96;
 }
 
 .dark .container {
@@ -130,6 +130,12 @@ img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
+	position: relative;
+	transition:all .5s !important;
+}
+
+img:hover {
+    transform: scale(1.9);  /*以y轴为中心旋转*/
 }
 
 .container .hide {

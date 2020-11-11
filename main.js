@@ -69,7 +69,7 @@ function getValue(key){
                     var imageElement = document.createElement('img');
                     imageElement.src = splitTag.val;
                     storyContainer.appendChild(imageElement);
-
+					
                     showAfter(delay, imageElement);
                     delay += 200.0;
                 }
