@@ -29,7 +29,8 @@ jobs:
       - name: build
         run: |
           mono inkle/inklecate.exe -o temp.json Entry.ink
-          cp -r template dist
+          cp -rf template dist
+          cp -rf img/ dist/img/
           echo "var storyContent = " > temp.txt
           cat temp.txt temp.json > dist/story.js
 
