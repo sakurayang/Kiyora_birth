@@ -1,0 +1,1 @@
+VAR life = 1
