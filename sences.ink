@@ -21,6 +21,19 @@
  ->restart
 + “挺好的故事”
 “那就好” 
+…………
+…………
+…………
+…………
+
+STAFF #CLASS: caption_title
+（以下排名不分先后）
+文案：
+程序：Drareg
+校对：
+
+互动视频：
+
 ->DONE
 =restart
 # RESTART

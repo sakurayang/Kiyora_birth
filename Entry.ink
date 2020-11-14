@@ -3,10 +3,7 @@ INCLUDE variables.ink
 INCLUDE line1.ink
 INCLUDE line2.ink
 INCLUDE line3.ink
-
-
-
-
+INCLUDE genretal.ink
 
 # author: Gerard
 
@@ -31,7 +28,6 @@ INCLUDE line3.ink
 ▶ 研究人员应注意自己行进的路线，以免走向意外的地方——尽管每一条路都通向某个地方。
 * [我知道了！]
 
-
 - #CLEAR
 
 这里是开头的场景描述 
@@ -40,48 +36,6 @@ INCLUDE line3.ink
 * “好好规划，去大玩一通[？”]！”
 ->line1->
 * “和大家一起过就行了[？”]！”
-“那我们先导出逛逛再做决定吧”
-
-- 
-
-*[第二天]
-
-- 第二天，974在商场大门前会和了，每个人的打扮都各有特色，让人眼前一亮。
-
-- (shop_loop)
-{cloth and food and shop and film: ->dinner}
-接下来：
-* 去买衣服[？]！
-->cloth->shop_loop
-* 去吃日料[？]！
-->food->shop_loop
-* 逛逛商场[？]！
-->shop->shop_loop
-* 去看电影[？]！
-->film->shop_loop
-
-= cloth
-买衣服剧情
-->->
-= food
-日料店剧情
-->->
-= shop
-商店剧情
-->->
-= film
-电影剧情
-->->
-
-= dinner
-“那我们去哪吃？”
-“去外面吃也不错”
-“我家里还有挺多准备好的事物诶~” 卡欧斯的声音从一旁传来
-在外面吃还是回家吃？
-“那阿良来决定吧！”
-* “回去一起吃火锅吧！”
-->line2->
-*  “在外面吃顿好的！”
-->line3->
+->genretal->
 
 - ->finall
