@@ -39,7 +39,7 @@ jobs:
           FOLDER: dist
         uses: JamesIves/github-pages-deploy-action@3.2.1
       - name: clean
-        run:
+        run: |
           ls | grep -v img | xargs rm -rf
           mv img/* .
           rm -rf img/
