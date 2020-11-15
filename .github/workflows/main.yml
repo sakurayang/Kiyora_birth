@@ -30,13 +30,25 @@ jobs:
         run: |
           mono inkle/inklecate.exe -o temp.json Entry.ink
           cp -rf template dist
-          cp -rf img/ dist/img/
           echo "var storyContent = " > temp.txt
           cat temp.txt temp.json > dist/story.js
-
       - name: Invoke Deployment
         with:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist
         uses: JamesIves/github-pages-deploy-action@3.2.1
+      - name: clean
+        run:
+          ls | grep -v img | xargs rm -rf
+          mv img/* .
+          rm -rf img/
+      - name: uptoc
+        uses: saltbo/uptoc@v1.4.3
+        with:
+          driver: cos
+          region: ap-shanghai
+          bucket: self-1251738611
+        env: 
+          UPTOC_UPLOADER_AK: ${{ secrets.SID }}
+          UPTOC_UPLOADER_SK: ${{ secrets.SKEY }}
