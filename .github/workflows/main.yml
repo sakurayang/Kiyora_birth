@@ -28,8 +28,10 @@ jobs:
 
       - name: build
         run: |
+          git lfs pull
           mono inkle/inklecate.exe -o temp.json Entry.ink
           cp -rf template dist
+          cp -rf img dist/img
           echo "var storyContent = " > temp.txt
           cat temp.txt temp.json > dist/story.js
       - name: Invoke Deployment
