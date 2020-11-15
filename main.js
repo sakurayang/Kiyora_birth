@@ -67,7 +67,7 @@ function getValue(key){
                 // IMAGE: src
                 if( splitTag && splitTag.property == "IMAGE" ) {
                     var imageElement = document.createElement('img');
-                    imageElement.src = splitTag.val;
+                    imageElement.src = "https://media.githubusercontent.com/media/sakurayang/Kiyora_birth/main/" + splitTag.val;
                     storyContainer.appendChild(imageElement);
 					
                     showAfter(delay, imageElement);
