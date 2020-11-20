@@ -3,12 +3,12 @@
 body {
     font-family: 'Open Sans', sans-serif;
     font-weight: lighter;
-    background: white;
+    background: #EFEFEF;
 }
 
 body.dark {
     background: black;
-    color: white;
+    color: #EFEFEF;
 }
 
 h1, h2 {
@@ -25,7 +25,6 @@ h1 {
 
 h2 {
     font-size: 14pt;
-    font-style: italic;
     font-family: sans-serif;
     font-weight: lighter;
     color: #BBB;
@@ -56,7 +55,7 @@ h3.written-in-ink {
 }
 
 .dark h3.written-in-ink {
-    background: black;
+    background: #0092CB;
 }
 
 
@@ -80,7 +79,7 @@ h3.written-in-ink {
     margin: 0 auto;
     padding: 20px;
     padding-top: 4em;
-    background: #ffffff96;
+    background: #EFEFEF;
 }
 
 .dark .container {
@@ -96,7 +95,7 @@ p {
 
 a {
     font-weight: 700;
-    color: #b97c2c;
+    /*color: #b97c2c;*/
     font-family: sans-serif;
     transition: color 0.6s;
     text-decoration: none;
@@ -109,29 +108,29 @@ a {
 
 
 a:hover {
-    color: black;
-    transition: color 0.1s;
+    color: #0075A2;
+    transition: color 1s;
 }
 
 .dark a:hover {
-    color: white;
+    color: #EFEFEF;
 }
 
 strong {
-    color: black;
+     color: #494E52;
     font-weight: bold;
 }
 
 .dark strong {
-    color: white;
+    color: #EFEFEF;
 }
 
 img {
     display: block;
     margin: 0 auto;
     max-width: 100%;
-	position: relative;
-	transition:all .5s !important;
+    position: relative;
+    transition:all .5s !important;
 }
 
 img:hover {
@@ -158,12 +157,18 @@ p.choice {
 
 /* first choice */
 :not(.choice) + .choice {
-    padding-top: 1em; 
+    padding-top: 1em;
 }
 
 
 p.choice a {
     font-size: 15pt;
+    color: #0092CB;
+}
+
+p.choice a:hover {
+    color: #0075A2;
+    transition: color 1s;
 }
 
 /* Built in class if you want to write:
@@ -172,50 +177,66 @@ p.choice a {
 .end {
     text-align: center;
     font-weight: bold;
-    color: black;
+    color: #494E52;
     padding-top: 20px;
     padding-bottom: 20px;
 }
 
 .dark .end {
-    color: white;
+    color: #EFEFEF;
+}
+
+.foot {
+    width:100%;
+    height:36px;
+    line-height:1.7em;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    text-align:center;
+    color:#898C8F;
+    background:#0092CB;
+}
+
+.foot a {
+    color:#EFEFEF;
 }
 
 #name{
-	border: 0;
-	border-bottom: #8b4f00 2px solid;
-	width: 50%;
-	position: relative;
-	left: 50%;
-	transform: translate(-50%,0%);
-	color: #b97c2c;
-	font-size: 1.5rem;
-	text-align: center;
+    border: 0;
+    border-bottom: #8b4f00 2px solid;
+    width: 50%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0%);
+    color: #b97c2c;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 .money,.save,.san,.item {
-	color: gray;
-	font-size: smaller;
-	text-align: center;
-	transition: ease-in-out;
-	transition-duration: 300ms;
+    color: gray;
+    font-size: smaller;
+    text-align: center;
+    transition: ease-in-out;
+    transition-duration: 300ms;
 }
 .money::before {
-	content: "💴";
+    content: "💴";
 }
 .money:hover {
     color:#05511b;
-	transition: ease-in-out;
-	transition-duration: 300ms;
+    transition: ease-in-out;
+    transition-duration: 300ms;
 }
 .caption_title {
-	text-align: center;
-	font-weight: bold;
-	font-size: x-large;
-	color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: x-large;
+    color: black;
 }
 .san::before{
-	content:"👾"
+    content:"👾"
 }
 
 .warn {
@@ -244,11 +265,115 @@ p.choice a {
 }
 .rail{
   color: white;
-  text-shadow: 0 0 1em #00CC99, 
-	0 0 0.7em #087098, 
-	0 0 0.5em #087098, 
-	0 0 0.2em #087098;
+  text-shadow: 0 0 1em #00CC99,
+    0 0 0.7em #087098,
+    0 0 0.5em #087098,
+    0 0 0.2em #087098;
 }
 .item::before {
   content: "📦"
+}
+
+.chat_chiharu,
+.chat_chaos,
+.chat_star,
+.chat_kiyora {
+  display: grid;
+  grid-template-rows: repeat(2,auto);
+  gap: 0px 5px;
+  width: max-content;
+}
+
+.chat_chiharu,
+.chat_chaos,
+.chat_star {
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "avatar name"
+    "avatar content";
+  
+}
+
+.chat_kiyora{
+  text-align: right;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    "name avatar"
+    "content avatar";
+  position: relative;
+  left: 100%;
+  transform: translate(-100%,0);
+}
+
+.chat_kiyora::after,
+.chat_chiharu::before,
+.chat_chaos::before,
+.chat_star::before {
+  grid-area: avatar;
+  content:"";
+  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 5px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.chat_kiyora::after { background-image: url("img/kiyora.jpg"); }
+.chat_chiharu::before { background-image: url("img/chiharu.jpg"); }
+.chat_chaos::before { background-image: url("img/chaos.jpg"); }
+.chat_star::before { background-image: url("img/star.jpg"); }
+
+.chat_kiyora::before,
+.chat_chiharu::after,
+.chat_chaos::after,
+.chat_star::after {
+  position: relative;
+  content: "";
+  top: -35.3px;
+  border-width: 10px;
+  border-style: solid;
+  width: 0px;
+  height: 0px;
+  border-top: none;
+  border-bottom-color: transparent;
+}
+
+.chat_chiharu::after,
+.chat_chaos::after,
+.chat_star::after {
+  left: 47px;
+  border-left-color: transparent;
+  border-right-color: white;
+}
+.chat_kiyora::before{
+  left: 99.8%;;
+  border-left-color: #87cefa;
+  border-right-color: transparent;
+}
+
+.name {
+  grid-area: name;
+  font-size: small;
+}
+.content {
+  grid-area: content;
+  color:black;
+  background: white;
+  padding: 3px 0.5rem;
+  border-radius: 5px;
+}
+
+.chat_chiharu>.content,
+.chat_chaos>.content,
+.chat_star>.content {
+  background-color: white;
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 15px !important;
+}
+
+.chat_kiyora>.content {
+  background-color: #87cefa;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 15px !important;
 }
