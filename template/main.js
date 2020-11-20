@@ -1,13 +1,13 @@
-var story = new inkjs.Story(storyContent);
-function setValue(key,val){
-	story.variablesState.$(key, val);
-	//if (key=="player_name") document.title=val+"大冒险"
-}
-function getValue(key){
-	return story.variablesState.$(key)
-}
-(function(storyContent) {
 
+//function setValue(key,val){
+//	story.variablesState.$(key, val);
+	//if (key=="player_name") document.title=val+"大冒险"
+//}
+//function getValue(key){
+//	return story.variablesState.$(key)
+//}
+(function(storyContent) {
+	var story = new inkjs.Story(storyContent);
     // Create ink story from the content using inkjs
     // Global tags - those at the top of the ink file
     // We support:
@@ -67,7 +67,7 @@ function getValue(key){
                 // IMAGE: src
                 if( splitTag && splitTag.property == "IMAGE" ) {
                     var imageElement = document.createElement('img');
-                    imageElement.src = "https://media.githubusercontent.com/media/sakurayang/Kiyora_birth/main/" + splitTag.val;
+                    imageElement.src = "https://self-1251738611.cos.ap-shanghai.myqcloud.com" + splitTag.val.replace(/img/g,"");
                     storyContainer.appendChild(imageElement);
 					
                     showAfter(delay, imageElement);
@@ -88,10 +88,20 @@ function getValue(key){
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
-                    if( tag == "RESTART" ) {
+                    if( splitTag && splitTag.property == "RESTART" ) {
                         restart();
                         return;
                     }
+                }
+                
+                //CHAT
+                else if (splitTag && splitTag.property == "CHAT"){
+                    customClasses.push("chat_" + splitTag.val);
+                    var name = paragraphText.split("：")[0];
+                    var content = paragraphText.split("：")[1];
+                    paragraphText = 
+                        "<span class=\"name\">" + name + "</span>" + 
+                        "<span class=\"content\">" + content + "</span>"
                 }
             }
 
@@ -244,3 +254,11 @@ function getValue(key){
     }
 
 })(storyContent);
+
+function turnofflight(){
+	document.body.classList.add("dark");
+}
+
+function turnonlight(){
+	document.body.classList.remove("dark");
+}
