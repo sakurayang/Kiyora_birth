@@ -7,6 +7,13 @@ INCLUDE genretal.ink
 
 # author: Gerard
 <script>turnonlight()</script>
+
+您是否在直播
+*[是] 
+~live=true
+*[否] 
+~live=false
+-
 十条盟约#CLASS: caption_title
 【一】在游玩过程中关闭页面的视为败北。
 【二】所有选项都会导致不同结果，一旦选择无法撤回。
@@ -37,7 +44,7 @@ INCLUDE genretal.ink
 红发大波浪：啊？就这？#CHAT: kiyora
 土味女水友：那你想要啥哦？#CHAT: chiharu
 NPC：不如我们一起出去玩吧？正好庆祝一下。#CHAT: star
-小心二次元：可以有，可以有。#CHAT:chaos
+小心二次元：好耶！#CHAT:chaos
 * [“那我们去哪玩呢？”]
 - 红发大波浪：那我们去哪玩呢？#CHAT: kiyora
 小心二次元：KTV怎么样？#CHAT:chaos
@@ -52,7 +59,12 @@ NPC：那……那……哎我也想不出。#CHAT: star
   红发大波浪：好好规划，去大玩一通！#CHAT: kiyora
   ->line1->
 * [和大家一起过就行？]
-  红发大波浪：和大家一起过就行了！#CHAT: kiyora
+  红发大波浪：千春千春，我只要和大家在一起就满足了！不用刻意做规划啦！！#CHAT: kiyora
+  土味女水友：那也行吧，我看明天好像天气不错，要不我们去逛该？#CHAT:chiharu
+  小心二次元：好啊，而且最近有新电影上映了，正好还能看个电影。#CHAT:chaos
+  NPC：那我们明天在商场门口集合吧！#CHAT: star
+  红发大波浪：那就说好了哦 到时不见不散#CHAT: kiyora
+
   ->genretal->
 
 - ->finall

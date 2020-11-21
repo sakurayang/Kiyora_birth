@@ -28,12 +28,15 @@
 
 STAFF #CLASS: caption_title
 （以下排名不分先后）
-文案：
-程序：Drareg
+总监制：蜘蛛 尼魔
+文案：鸽子人 七夜 梨梨子
+插图：早间盐
+程序：头发已经一根都不剩了的Drareg
+程序测试：玩偶生产基地的各位
 校对：
-
 互动视频：
 
+{not live:图片储存由腾讯云提供支持 (OvO)}
 ->DONE
 =restart
 # RESTART
