@@ -39,5 +39,24 @@ STAFF #CLASS: caption_title
 {not live:图片储存由腾讯云提供支持 (OvO)}
 ->DONE
 =restart
-# RESTART
+#RESTART
 ->DONE
+
+===cake===
+黑暗中，唯有蛋糕上的蜡烛发着柔和的光。
+大家围在蛋糕旁，拍手唱起了生日歌。
+
+Happy birthday to you #CLASS: music
+Happy birthday to you #CLASS: music
+Happy birthday to dear KIYORA #CLASS: music
+Happy birthday to you #CLASS: music
+
+“阿良，生日快乐！”千春，素星和卡欧斯三人站在烛光中鼓着掌，对今天的寿星送上了最好的祝福。
+“阿良快点来许愿吧！” 千春催促着清良
+*[闭上眼睛]
+-
+清良闭上眼睛，睫毛微颤，温暖的烛光照在她的脸上，想必是在认真许愿吧。
+诶？会是什么样的愿望呢？
+清良对着面前的蜡烛吹了一口气，将自己的愿望连同摇曳的烛光，送向了命运之神。
+“说出来就不灵了哦！” 清良眨了眨眼，对着不知道谁说。
+->->

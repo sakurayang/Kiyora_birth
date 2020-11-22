@@ -7,7 +7,6 @@ INCLUDE genretal.ink
 
 # author: Gerard
 <script>turnonlight()</script>
-
 您是否在直播
 *[是] 
 ~live=true
