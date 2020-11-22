@@ -88,7 +88,7 @@
                     // Comment out this line if you want to leave the header visible when clearing
                     setVisible(".header", false);
 
-                    if( splitTag && splitTag.property == "RESTART" ) {
+                    if( tag == "RESTART" ) {
                         restart();
                         return;
                     }
@@ -214,8 +214,7 @@
 
     // Remove all elements that match the given selector. Used for removing choices after
     // you've picked one, as well as for the CLEAR and RESTART tags.
-    function removeAll(selector)
-    {
+    function removeAll(selector){
         var allElements = storyContainer.querySelectorAll(selector);
         for(var i=0; i<allElements.length; i++) {
             var el = allElements[i];
@@ -224,8 +223,7 @@
     }
 
     // Used for hiding and showing the header when you CLEAR or RESTART the story respectively.
-    function setVisible(selector, visible)
-    {
+    function setVisible(selector, visible){
         var allElements = storyContainer.querySelectorAll(selector);
         for(var i=0; i<allElements.length; i++) {
             var el = allElements[i];

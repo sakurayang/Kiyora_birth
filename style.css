@@ -52,6 +52,7 @@ h3.written-in-ink {
     padding-top: 6px;
     padding-bottom: 6px;
     top: 0;
+    z-index: 1;
 }
 
 .dark h3.written-in-ink {
@@ -222,11 +223,11 @@ p.choice a:hover {
     transition-duration: 300ms;
 }
 
-.music::before
+.music::before,
 .music::after {
   content:"🎵";
 }
-
+.music{ font-size: lagger;}
 .money::before {
     content: "💴";
 }
