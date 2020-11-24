@@ -81,7 +81,7 @@
 
 = shop
 TODO 剧情
-{notlive: todo:补充剧情}
+{not live: todo:补充剧情}
 ->->
 
 = film
