@@ -7,6 +7,13 @@ INCLUDE genretal.ink
 
 # author: Gerard
 <script>turnonlight()</script>
+{saved:
+  是否继续自动保存的内容
+  * [是]->start
+  * [否]->start
+}
+
+- (start)
 您是否在直播
 *[是] 
 ~live=true
@@ -55,7 +62,6 @@ NPC：那……那……哎我也想不出。#CHAT: star
 红发大波浪：哇小千你好棒！让我想想哦……#CHAT: kiyora
 
 * [好好规划去大玩一通？]
-  红发大波浪：好好规划，去大玩一通！#CHAT: kiyora
   ->line1->
 * [和大家一起过就行？]
   ->genretal->

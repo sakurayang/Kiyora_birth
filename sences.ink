@@ -43,6 +43,7 @@ STAFF #CLASS: caption_title
 ->DONE
 
 ===cake===
+TODO 音乐
 黑暗中，唯有蛋糕上的蜡烛发着柔和的光。
 大家围在蛋糕旁，拍手唱起了生日歌。
 
