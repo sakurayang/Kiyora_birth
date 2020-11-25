@@ -332,34 +332,6 @@ p.choice a:hover {
 .chat_chaos::before { background-image: url("img/chaos.jpg"); }
 .chat_star::before { background-image: url("img/star.jpg"); }
 
-.chat_kiyora::before,
-.chat_chiharu::after,
-.chat_chaos::after,
-.chat_star::after {
-  position: relative;
-  content: "";
-  top: -35.3px;
-  border-width: 10px;
-  border-style: solid;
-  width: 0px;
-  height: 0px;
-  border-top: none;
-  border-bottom-color: transparent;
-}
-
-.chat_chiharu::after,
-.chat_chaos::after,
-.chat_star::after {
-  left: 49px;
-  border-left-color: transparent;
-  border-right-color: white;
-}
-.chat_kiyora::before{
-  left: 96.8%;
-  border-left-color: #87cefa;
-  border-right-color: transparent;
-}
-
 .name {
   grid-area: name;
   font-size: small;
