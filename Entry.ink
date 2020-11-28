@@ -6,7 +6,6 @@ INCLUDE line3.ink
 INCLUDE genretal.ink
 
 # author: Gerard
-<script>turnonlight()</script>
 {saved:
   是否继续自动保存的内容
   * [是]->start
