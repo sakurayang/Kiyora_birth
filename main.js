@@ -103,6 +103,19 @@
                         "<span class=\"name\">" + name + "</span>" + 
                         "<span class=\"content\">" + content + "</span>"
                 }
+                
+                //APlayer
+                else if (splitTag && splitTag.property == "APlayer") {
+					let type = splitTag.val;
+					let ap = new APlayer({
+						container: document.getElementById('aplayer'),
+						fixed: true,
+						loop: "one",
+						listFolded: true,
+						audio: [audios[type]]
+					});
+					setTimeout(()=>ap.play(),500);
+                }
             }
 
             // Create paragraph element (initially hidden)
@@ -167,6 +180,7 @@
         continueStory(true);
 
         outerScrollContainer.scrollTo(0, 0);
+        window.location.reload(false);
     }
 
     // -----------------------------------
