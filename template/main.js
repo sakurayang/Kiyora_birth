@@ -1,4 +1,4 @@
-const ADDRESS = "https://gerard.oss-cn-beijing.aliyuncs.com/"
+const ADDRESS = "https://gerard.oss-cn-beijing.aliyuncs.com/";
 var configure = {
 	container: document.getElementById('player'),
     fixed: true,
@@ -35,7 +35,7 @@ var audios = {
         /* https://y.music.163.com/m/song/28563151 */
     }
     
-}
+};
 //function setValue(key,val){
 //	story.variablesState.$(key, val);
     //if (key=="player_name") document.title=val+"大冒险"
