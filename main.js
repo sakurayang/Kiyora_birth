@@ -13,7 +13,7 @@ var audios = {
         cover: ADDRESS + 'play.jpg'
         /* https://y.music.163.com/m/song/1450856317 */
     },
-    outside: {
+    out: {
         name: 'Best Happy Birthday To You _ Happy Birthday Songs Remix 2020-O2',
         artist: 'Happy Birthday',
         url: ADDRESS + 'out.aac',
