@@ -20,7 +20,7 @@ var audios = {
         cover: ADDRESS + 'out.jpg'
         /* https://www.youtube.com/watch?v=O2aQhWwxuyY */
     },
-    home: {
+    hotpot: {
         name: '祝你生日快乐Happy Birthday to You',
         artist: '施云翔（猫猫），许加一',
         url: ADDRESS + 'home.aac',
