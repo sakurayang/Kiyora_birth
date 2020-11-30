@@ -1,13 +1,50 @@
-
+const ADDRESS = "https://gerard.oss-cn-beijing.aliyuncs.com/"
+var configure = {
+	container: document.getElementById('player'),
+    fixed: true,
+    loop: "one",
+    listFolded: true
+};
+var audios = {
+    play: {
+        name: 'Happy Birthday',
+        artist: 'DJ Bobo',
+        url: ADDRESS + 'play.aac',
+        cover: ADDRESS + 'play.jpg'
+        /* https://y.music.163.com/m/song/1450856317 */
+    },
+    outside: {
+        name: 'Best Happy Birthday To You _ Happy Birthday Songs Remix 2020-O2',
+        artist: 'Happy Birthday',
+        url: ADDRESS + 'out.aac',
+        cover: ADDRESS + 'out.jpg'
+        /* https://www.youtube.com/watch?v=O2aQhWwxuyY */
+    },
+    home: {
+        name: '祝你生日快乐Happy Birthday to You',
+        artist: '施云翔（猫猫），许加一',
+        url: ADDRESS + 'home.aac',
+        cover: ADDRESS + 'home.jpg'
+        /* https://y.music.163.com/m/song/516254504 */
+    },
+    tired: {
+        name: 'Happy Birthday',
+        artist: '西野カナ',
+        url: ADDRESS + 'tired.aac',
+        cover: ADDRESS + 'tired.jpg'
+        /* https://y.music.163.com/m/song/28563151 */
+    }
+    
+}
 //function setValue(key,val){
 //	story.variablesState.$(key, val);
-	//if (key=="player_name") document.title=val+"大冒险"
+    //if (key=="player_name") document.title=val+"大冒险"
 //}
 //function getValue(key){
 //	return story.variablesState.$(key)
 //}
 (function(storyContent) {
-	var story = new inkjs.Story(storyContent);
+    var story = new inkjs.Story(storyContent);
     // Create ink story from the content using inkjs
     // Global tags - those at the top of the ink file
     // We support:
@@ -69,7 +106,7 @@
                     var imageElement = document.createElement('img');
                     imageElement.src = "https://self-1251738611.cos.ap-shanghai.myqcloud.com" + splitTag.val.replace(/img/g,"");
                     storyContainer.appendChild(imageElement);
-					
+                    
                     showAfter(delay, imageElement);
                     delay += 200.0;
                 }
@@ -106,15 +143,15 @@
                 
                 //APlayer
                 else if (splitTag && splitTag.property == "APlayer") {
-					let type = splitTag.val;
-					let ap = new APlayer({
-						container: document.getElementById('aplayer'),
-						fixed: true,
-						loop: "one",
-						listFolded: true,
-						audio: [audios[type]]
-					});
-					setTimeout(()=>ap.play(),500);
+                    let type = splitTag.val;
+                    let ap = new APlayer({
+                        container: document.getElementById('aplayer'),
+                        fixed: true,
+                        loop: "one",
+                        listFolded: true,
+                        audio: [audios[type]]
+                    });
+                    setTimeout(()=>ap.play(),500);
                 }
             }
 
@@ -268,9 +305,9 @@
 })(storyContent);
 
 function turnofflight(){
-	document.body.classList.add("dark");
+    document.body.classList.add("dark");
 }
 
 function turnonlight(){
-	document.body.classList.remove("dark");
+    document.body.classList.remove("dark");
 }
