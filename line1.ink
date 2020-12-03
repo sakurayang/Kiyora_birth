@@ -162,7 +162,7 @@ NPC：摩天轮呢？摩天轮也是必须的吧！#CHAT:star
 原来是这坏家伙！阿良狠狠地想着，却笑得无比开心。
 “生日快乐！”，祝福与掌声回绕在乐园上空，经久不散。
 #APlayer: play
-#IMAGE:img/line1_end.jpg
+#IMAGE:img/line1@1080_wm.jpg
 *{fire}[扭头看向卡欧斯]
 {fire:
   "对了，"清良突然向卡欧斯说道，“我们等了你一整天了知道吗？”

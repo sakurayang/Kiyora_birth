@@ -51,7 +51,7 @@
 #APlayer: hotpot
 #nothing here
 ->cake->
-TODO 图片
+#IMAGE:img/line3@1080_wm.jpg
 然后大家开始分蛋糕，但是让人奇怪的是，千春在唱完生日歌之后便不知道到哪去了。
 * “千春呢？”[] 清良向四周看了看。
 -
