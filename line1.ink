@@ -78,7 +78,7 @@ NPC：摩天轮呢？摩天轮也是必须的吧！#CHAT:star
   {rool_coaster: 
     “我们再去玩一遍过山车吧！”
   - else:
-    “我们{not rool_coaster or not ghost_house or not hourse: 先}去玩过山车吧！”
+    “我们{not rool_coaster and not ghost_house and not hourse: 先}去玩过山车吧！”
   }
   ~ TURN+=1
   ->rool_coaster->play_loop
@@ -86,7 +86,7 @@ NPC：摩天轮呢？摩天轮也是必须的吧！#CHAT:star
   {ghost_house: 
     “我们再去玩一遍鬼屋吧！”
   - else:
-    “我们{not rool_coaster or not ghost_house or not hourse: 先}去玩鬼屋吧！”
+    “我们{not rool_coaster and not ghost_house and not hourse: 先}去玩鬼屋吧！”
   }
   ~ TURN+=1
   ->ghost_house->play_loop
@@ -94,7 +94,7 @@ NPC：摩天轮呢？摩天轮也是必须的吧！#CHAT:star
   {hourse: 
     “我们再去玩一遍旋转木马吧！”
   - else:
-    “我们{not rool_coaster or not ghost_house or not hourse: 先}去玩旋转木马吧！”
+    “我们{not rool_coaster and not ghost_house and not hourse: 先}去玩旋转木马吧！”
   }
   ~ TURN+=1
   ->hourse->play_loop

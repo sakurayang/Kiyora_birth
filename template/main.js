@@ -3,7 +3,9 @@ var configure = {
 	container: document.getElementById('player'),
     fixed: true,
     loop: "one",
-    listFolded: true
+    listFolded: true,
+    volume: 0.5,
+    mutex: true
 };
 var audios = {
     play: {
