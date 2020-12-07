@@ -1,5 +1,4 @@
 const ADDRESS = "https://gerard.oss-cn-beijing.aliyuncs.com/";
-
 var audios = {
     play: {
         name: 'Happy Birthday',
@@ -29,7 +28,6 @@ var audios = {
         cover: ADDRESS + 'tired.jpg'
         /* https://y.music.163.com/m/song/28563151 */
     }
-    
 };
 //function setValue(key,val){
 //	story.variablesState.$(key, val);
@@ -149,7 +147,7 @@ var audios = {
 						volume: 0.45,
 						mutex: true
                     });
-                }
+                
             }
 
             // Create paragraph element (initially hidden)
