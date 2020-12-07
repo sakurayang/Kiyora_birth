@@ -295,7 +295,7 @@ var audios = {
 
         return null;
     }
-
+}
 })(storyContent);
 
 function turnofflight(){
