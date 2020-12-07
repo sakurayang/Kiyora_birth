@@ -149,8 +149,6 @@ var audios = {
 						volume: 0.45,
 						mutex: true
                     });
-					let isLive = story.variablesState.$("live")
-                    if (islive) setTimeout(()=>ap.play(),500);
                 }
             }
 
