@@ -145,8 +145,10 @@ var audios = {
                         listFolded: true,
                         audio: [audios[type]],
                         volume: 0.45,
-                        mutex: true
+                        mutex: true,
+                        autoplay: true
                     });
+                    ap.play();
                 }
             }
 
