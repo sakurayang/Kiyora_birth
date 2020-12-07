@@ -137,16 +137,17 @@ var audios = {
                 //APlayer
                 else if (splitTag && splitTag.property == "APlayer") {
                     let type = splitTag.val;
-					
+                    
                     let ap = new APlayer({
                         container: document.getElementById('aplayer'),
                         fixed: true,
                         loop: "one",
                         listFolded: true,
                         audio: [audios[type]],
-						volume: 0.45,
-						mutex: true
+                        volume: 0.45,
+                        mutex: true
                     });
+                }
             }
 
             // Create paragraph element (initially hidden)
@@ -295,7 +296,6 @@ var audios = {
 
         return null;
     }
-}
 })(storyContent);
 
 function turnofflight(){
