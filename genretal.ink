@@ -16,7 +16,7 @@
 “阿良想买啥吗？” 千春站在清良的旁边拍着她的肩膀。
 “诶？我吗？等我想想……”
 
-~temp TURN = 0
+~ TURN = 0
 - (shop_loop)
 {bridge: ->dinner}
 {cloth or book or food or film: 
