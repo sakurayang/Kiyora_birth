@@ -1,12 +1,5 @@
 const ADDRESS = "https://gerard.oss-cn-beijing.aliyuncs.com/";
-var configure = {
-	container: document.getElementById('player'),
-    fixed: true,
-    loop: "one",
-    listFolded: true,
-    volume: 0.5,
-    mutex: true
-};
+
 var audios = {
     play: {
         name: 'Happy Birthday',
@@ -146,14 +139,18 @@ var audios = {
                 //APlayer
                 else if (splitTag && splitTag.property == "APlayer") {
                     let type = splitTag.val;
+					
                     let ap = new APlayer({
                         container: document.getElementById('aplayer'),
                         fixed: true,
                         loop: "one",
                         listFolded: true,
                         audio: [audios[type]]
+						volume: 0.45,
+						mutex: true
                     });
-                    setTimeout(()=>ap.play(),500);
+					let isLive = story.variablesState.$("live")
+                    if (islive) setTimeout(()=>ap.play(),500);
                 }
             }
 
