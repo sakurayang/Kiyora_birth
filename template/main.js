@@ -143,11 +143,10 @@ var audios = {
                         fixed: true,
                         loop: "one",
                         listFolded: true,
-                        audio: [audios[type]]
+                        audio: [audios[type]],
 						volume: 0.45,
 						mutex: true
                     });
-                
             }
 
             // Create paragraph element (initially hidden)
