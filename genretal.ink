@@ -31,7 +31,7 @@
   ~TURN+=1
   “我想去逛一下商场！”
   ->book->shop_loop
-* {book or cloth or food}[去看电影？]
+* {chaos}[去看电影？]
   ~TURN+=1
   “嗯……去看电影吧。”
   ->film->shop_loop
